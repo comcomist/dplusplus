@@ -1,0 +1,21 @@
+
+10.12.2019 18:51:41
+
+olimex is working with qt, hence we target: d++devices in qdolphin machine, 
+such that the olimex devices with screen could make qdolphin !!!
+eg: FFmpeg by qtav on A13-OLinuXino.
+	https://www.qtav.org/ https://github.com/wang-bin/QtAV
+	https://olimex.wordpress.com/2013/12/17/qtav-running-on-a13-olinuxino-wifi-with-hardware-acceleration/
+
+see also
+	https://www.olimex.com/forum/index.php?PHPSESSID=bq6feu15at64sl1hptpl1t60ba&topic=3825.0
+	https://www.olimex.com/forum/index.php?topic=3826.0
+	https://github.com/chschnell/build-qt5-rpi
+		but
+		to update 5.9 to 5.13 in /var/sid-root/a/github/processing/d++device/build-qt5-rpi-master/build-qt5-rpi.sh
+		https://github.com/chschnell/build-qt5-rpi#script-details
+		https://download.qt.io/archive/qt/5.13/5.13.2/single/qt-everywhere-src-5.13.2.tar.xz
+
+
+10.12.2019 18:47:17
+	this is the initial step in which the purpose of the text is declared as "for anything". 
