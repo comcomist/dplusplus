@@ -1,3 +1,21 @@
+11.12.2019 12:02:35
+
+OLIMEXINO-NANO-GSM  Can be used with OLIMEXINO-NANO and OLIMEXINO-NANO-BAT or stand alone
+https://olimex.wordpress.com/tag/qt/
+
+one simple option could for connecting devices to case is by sticker swatch.
+
+1. mini router sim 
+2. by  olimex
+2.2 for  64bit encryptor https://www.olimex.com/Products/OLinuXino/A64/A64-OLinuXino/open-source-hardware
+	in BOX-LIME (6.00 EUR ,100 x 70 x 25 mm)
+	(36.00 EUR,90.0 x 62.5mm)   
+	A64-OLinuXino-1G with 1GB RAM but NO flash and NO WiFi/BLE connectivity
+2.3 
+	4.3" LCD  25.00 EUR
+	LCD-OLinuXino-4.3TS https://www.olimex.com/Products/OLinuXino/LCD/LCD-OLinuXino-4.3TS/open-source-hardware
+	LCD-OLinuXino-4.3RTS is LCD with resistive touch panel and digital interface suitable for A33, A64 (also A10/A20 if their digital interface is enabled)
+    KBD-BT1 https://www.olimex.com/Products/OLinuXino/Accessories/KBD-BT1/
 
 10.12.2019 18:51:41
 
