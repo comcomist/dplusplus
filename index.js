@@ -1,4 +1,19 @@
 // under humanitarian agpl license:  You are not allowed to use, produce from or design from this or its part, anything contained with the aim to kill, to torture, or without their consent, to cause harm to or to monitor people and any permission beside this restriction is granted here only under the Agpl License! https://hopeisback.com/#hagpl
+function restuctForm(c){//let c = document.createElement("div");
+	c.innerHTML+="In ";        
+			addfield(c,"radio","locatingit") ;//container.children[0]
+			c.innerHTML+="or Before :";
+			addfield(c,"radio","locatingit","checked");//container.children[1] 
+		    addfield(c,"text","lname","br","The locating name");//container.children[2]	
+		    addfield(c,"text","fname","br","The name of this element");//container.children[4]
+		    addfield(c,"text","tname","br","The title of this element");//container.children[6]
+		    c.innerHTML  +="Its Icon: ";
+		    addfield(c,"file","icnname").accept="image/png, image/jpeg";//container.children[8]
+		    c.innerHTML  +="Its Image: ";
+		    addfield(c,"file","imgname","br").accept="image/png, image/jpeg";//container.children[9]		  
+			return c;
+	}//<div id="create-item">
+
 function contentApply(container,txt){
 	let	bein = container.children[0].checked,
 		bebefore = container.children[1].checked;
@@ -43,31 +58,27 @@ function contentApply(container,txt){
 	return txt.slice(0,cutAt)+toinsert+txt.slice(cutAt,txt.length);}
 
 function restruct (container,steps) {
-	let c = document.getElementById(container),p=document.getElementById(steps);
-	if(p.value ===0){c.value=[1,loadfile(),""];p.value=1;} // [step,filename, filecontent]
-	else switch(c.value[0]){
-		case 1:	c.value=[2,c.value[1].files[0],""];
-			window.open(c.value[1].name);//,"bemodified", "menubar=no,location=no,resizable=yes,scrollbars=yes,status=yes").document.innerHTML;
-			c.style.display="block";
-			c.innerHTML+="In ";        
-			addfield(c,"radio","locatingit") ;//container.children[0]
-			c.innerHTML+="or Before :";
-			addfield(c,"radio","locatingit","checked");//container.children[1] 
-		    addfield(c,"text","lname","br","The locating name");//container.children[2]	
-		    addfield(c,"text","fname","br","The name of this element");//container.children[4]
-		    addfield(c,"text","tname","br","The title of this element");//container.children[6]
-		    c.innerHTML  +="Its Icon: ";
-		    addfield(c,"file","icnname").accept="image/png, image/jpeg";//container.children[8]
-		    c.innerHTML  +="Its Image: ";
-		    addfield(c,"file","imgname","br").accept="image/png, image/jpeg";//container.children[9]		  
-			let reader = new FileReader();
-			reader.onload = function () {		
-				c.value=[2,c.value[1],reader.result];
-		 	 p.value=2;//		 	 
-		 	    }
-			reader.readAsBinaryString(c.value[1]);
-    break;
-		case 2: c.value[2]=contentApply(c,c.value[2]);	
+	let c = document.getElementById(container),
+	    p = document.getElementById(steps);
+	if(p.value ===0){c.value=[1,loadfile(),""];p.value=1;
+	document.getElementById("create-item-progress2").innerText="Open and save  this file as you like (all files). and then open that (ctrl+O)";	} // [step,filename, filecontent]
+	else {c.value=[2,c.value[1].files[0],""];
+			  window.open(c.value[1].name);//,"bemodified", "menubar=no,location=no,resizable=yes,scrollbars=yes,status=yes").document.innerHTML;
+		    let reader = new FileReader();
+			  reader.onload = function () {		
+				// here to plant  
+			      //1. in <body.. replace '>' with 'contenteditable="true"> <div id="retructrinnnnng"><button type="button" onclick="restuctForm(this)";>return</button><button type="button" onclick="makeredytosave(this)";>ok</button></div>'
+				  //2. button to restuctForm , ok button to seld delete this element
+//c 	  = restuctForm(c);						c.style.display="block";
+
+				  saveas(c.value[0].name,reader.result);
+				//c.value=[2,c.value[1],reader.result];
+		 	// p.value=2;//		 	 
+		 	  }
+			  reader.readAsBinaryString(c.value[1]);
+ }}   
+   // break;		case 2:
+		 /*c.value[2]=contentApply(c,c.value[2]);	
 				if(c.value[2]){p.value=3;
 				saveas(c.value[1].name,c.value[2]);
 		   //todo here after save window.open(c.value[1].name).. 
@@ -75,8 +86,9 @@ function restruct (container,steps) {
 				}else {while (c.firstChild) c.removeChild(c.firstChild);
 					   p.value=0;}
 				c.value[0]=0;
-    break;
-		}}/*  * usage eg:
+				*/
+    //break;
+		/*  * usage eg:
  <div id="create-item" ></div>
     <a href="javascript:void(0);" 
          onclick="restruct('create-item','create-item-progress');">       
